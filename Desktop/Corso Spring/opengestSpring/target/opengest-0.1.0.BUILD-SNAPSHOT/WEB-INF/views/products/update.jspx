@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_it_clever_opengest_business_domain_Product" idField="idProdotto" modelAttribute="product" path="/products" versionField="Version" z="eSjvI+F8Cc/L3IxZqrWJMbYG+p4=">
+        <field:input field="codice" id="c_it_clever_opengest_business_domain_Product_codice" required="true" z="kCI3ATWKvypOKJhnwyDzTEhJTm4="/>
+        <field:input field="descrizione" id="c_it_clever_opengest_business_domain_Product_descrizione" required="true" z="LixXVZTwou0QjI+6joAm0XAmrcc="/>
+        <field:input field="prezzo" id="c_it_clever_opengest_business_domain_Product_prezzo" required="true" validationMessageCode="field_invalid_number" z="9u4nwo5gMXBcU2NTd037BQIW1RU="/>
+        <field:simple field="ordinis" id="c_it_clever_opengest_business_domain_Product_ordinis" messageCode="entity_reference_not_managed" messageCodeAttribute="Order" z="WfttgRDNG5GFTSeg5BAaw5kQO3Y="/>
+    </form:update>
+</div>

@@ -1,0 +1,73 @@
+x=100
+y=200
+lunghezzaParola: 8: conta i caratteri, è 8
+
+X sarà fissa
+divido la x in due parti, da 100 a 50.
+ora ho la lunghezza 8, cosa ci faccio? trovo un punto medio dove inserirla? ho 50, toglierei un valore ZZZ da entrambi i lati per scegliere
+la metà di 50 è 25... partirei da x=21 (perchè ho preso la lenght dell'espansiione, e sottraggo 2) per inserire la scritta della espansione
+Per cui ricapitolo:
+VERSIONE1:
+trovo la X: lunghezza parola 8? allora faccio X/4 - lunghezzaParola/2
+trovo la Y: la setto di default
+VERSIONE2
+trovo la X: lunghezza parola 8? allora faccio X*3/4 - lunghezzaParola/2
+trovo la Y: la setto di default
+
+TITOLO
+trovo la X: lunghezza parola 8? allora faccio X/2 - lunghezzaParola/2
+trovo la Y: la setto di default
+
+RICOMPENSA
+vedi TITOLO, shiftando la Y di -100
+
+NUMERO
+X e Y sempre fissi
+
+TESTO
+occorre fare delle modifiche importanti**... devo prendere delle porzioni di area... 
+da metà Y in su prenderei... e la X la prenderei tutta tranne dei bordini... per cui area di X[10-90] e Y[10-90]
+
+REWARD 
+vedi testo, sfhitando la Y di -100
+
+**potrei fare un formatter che ogni tot lettere, si va a capo, prendendo in considerazione che non deve tagliare le parole, ma tenere conto
+dello spazio per andare a capo.
+
+
+***faccio tipo, leggo parola e la metto e conto a quanto posso arrivare massimo
+prima parola, 2/20
+seconda parola, 10/20
+terza parola, 18/20
+quarta parola 23/20
+non va bene! inserisco un \n, resetto il contatore e rinizio con
+prima parola 5/20
+seconda parola 7/20
+terza parola 20/20
+quarta parola 22/20 non va bene! inserisco un \n e vado avanti
+
+
+   private String formattaTesto(String prova) {
+        String result = null;
+        int max = 50;
+        int attuale = 0;
+
+        StringTokenizer stringTokenizer = new StringTokenizer(prova);
+        while (stringTokenizer.hasMoreTokens()) {
+
+            String inserimentoParola = stringTokenizer.nextToken();
+            if ((inserimentoParola.length() + attuale) < max) {
+                result += inserimentoParola;
+                attuale = attuale + inserimentoParola.length();
+            } else {
+                result += "\n";
+                attuale =inserimentoParola.length();
+                result += inserimentoParola;
+
+            }
+
+        }
+
+
+        return result;
+    }

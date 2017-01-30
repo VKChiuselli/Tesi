@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application-configs>
+	<context-list>
+		<Context path="/opengest">
+			<config-list>
+				<config>
+					<name>PARAM_DATABASE_DRIVER</name>
+					<value>com.mysql.jdbc.Driver</value>
+				</config>
+				<config>
+					<name>PARAM_DATABASE_URL</name>
+					<value>jdbc:mysql://localhost:3306/opengest?autoReconnect=true</value>		
+				</config>
+				<config>
+					<name>PARAM_DATABASE_DATASOURCE</name>
+					<value>java:comp/env/jdbc/opengestdb-ds</value>		
+				</config>
+				<config>
+					<name>PARAM_DATABASE_USERNAME</name>
+					<value>root</value>		
+				</config>
+				<config>
+					<name>PARAM_DATABASE_PASSWORD</name>
+					<value>root</value>		
+				</config>
+				<config>
+					<name>UP</name>
+					<value>jnp://localhost:1099</value>		
+				</config>
+				<config>
+					<name>UPP</name>
+					<value>org.jboss.naming:org.jnp.interfaces</value>		
+				</config>
+				<config>
+					<name>ICF</name>
+					<value>org.jnp.interfaces.NamingContextFactory</value>		
+				</config>
+				<config>
+					<name>PARAM_DATABASE_START_MODE</name>
+					<value>DATASOURCE</value>		
+				</config>
+			</config-list>		
+		</Context> 
+	</context-list>
+
+</application-configs>

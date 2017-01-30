@@ -1,0 +1,26 @@
+     <menu:category id="g_group" z="Aa+bVSiDyYo/wX1nGU1B/z+OKhE=">
+            <menu:item id="g_group_new" messageCode="global_menu_new" url="/groups?form" z="A9+YIotZHp6KZLGKwwnMVzPvh8k="/>
+            <menu:item id="g_group_list" messageCode="global_menu_list" url="/groups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ao9cUtyc7EUvbxwQ7EoeqXWaVJM="/>
+        </menu:category>
+        
+
+GroupController_Roo_Controller
+
+
+
+
+
+list del group
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_it_clever_opengest_business_domain_Group" items="${groups}" z="qecv632157N+FZIUCz+ZtyTVGM4=">
+        <table:table data="${group}" id="l_it_clever_opengest_business_domain_Group" path="/groups" typeIdFieldName="idGroup" z="UPqQYfwy6qDgcwTcrYO4FVQ0IOI=">
+            <table:column id="c_it_clever_opengest_business_domain_Group_nome" property="nome" z="Ay6v6Xb9f12SQVyqM0lcxlCE1yc="/>
+            <table:column id="c_it_clever_opengest_business_domain_Group_descrizione" property="descrizione" z="Alc0oqWyHtnXe/tnfwklrbJ/5CI="/>
+                     </table:table>
+    </page:list>
+</div>

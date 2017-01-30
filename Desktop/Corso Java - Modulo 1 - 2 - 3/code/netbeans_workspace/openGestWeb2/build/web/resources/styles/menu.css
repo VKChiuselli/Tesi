@@ -1,0 +1,282 @@
+.bordered-menu {
+	
+	border-top-right-radius:4px 4px 4px 4px; 	  
+	/*	
+		border-bottom-right-radius:4px 4px 4px 4px; 	
+		border-bottom-left-radius:4px 4px 4px 4px; 
+		-moz-border-radius-bottomright:4px 4px 4px 4px; 
+		-moz-border-radius-bottomleft:4px 4px 4px 4px; 
+		-webkit-border-bottom-right-radius:4px 4px 4px 4px; 
+		-webkit-border-bottom-left-radius:4px 4px 4px 4px;  
+	*/ 	
+	border-top-left-radius:4px 4px 4px 4px; 	    
+	border-radius:4px 4px 4px 4px;
+	    
+	-moz-border-radius-topright:4px 4px 4px 4px; 	 
+	-moz-border-radius-topleft:4px 4px 4px 4px; 	   
+	-moz-border-radius:4px 4px 4px 4px; 	
+	
+	-webkit-border-top-right-radius:4px 4px 4px 4px;    
+	-webkit-border-top-left-radius:4px 4px 4px 4px;     
+	-webkit-border-radius:4px 4px 4px 4px;  
+}
+
+.bordered-menu {
+	
+}
+
+#topmenu {
+	font-weight: bolder;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-top: 20px;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFFFFF;
+    background-image: url("../../resources/images/skinny_dots.gif");
+    background-origin: padding-box;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-size: auto auto;
+}
+
+#topmenu ul {
+    font-size: 15px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;	
+}
+
+#topmenu ul li {
+	display: inline-block;
+	-moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #F4FAFF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #AECEEF;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #AECEEF;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    
+    border-bottom-color: #AECEEF;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-top-color: #AECEEF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-left-color: #AECEEF;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #AECEEF;
+    border-right-style: solid;
+    border-right-width: 1px;
+    
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 4px;
+    margin-top: 0;
+    position: relative;
+    width: auto !important;
+    
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#topmenu a {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;	
+	margin-left: 10px;
+	color: #1F75CC;
+	list-style: none;
+}
+
+#subtabs ul {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFFFFF;
+    background-image: url("../resources/images/light_blue_border.gif");
+    background-origin: padding-box;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-size: auto auto;
+    float: left;
+    height: 32px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 9px;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+    text-align: left;
+}
+
+#subtabs ul li {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #F4FAFF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #AECEEF;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #AECEEF;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #AECEEF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 4px;
+    margin-top: 0;
+    position: relative;
+    width: auto !important;
+    
+}
+
+#usermenu {
+	font-size: 10pt;
+	font-weight: bold;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFFFFF;
+    background-image: url("../../resources/images/skinny_dots.gif");
+    background-origin: padding-box;
+    background-position:  bottom;
+    background-repeat: repeat-x;
+    background-size: auto auto;	
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;	
+	float: left;
+	margin-top: 50px;
+	border: 1px dotted #CCCCCC;
+	list-style-image: none;
+    list-style-position: inside;
+    list-style-type: none;
+  /*  
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #E9F4FF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #AACCEE;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #AACCEE;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #AACCEE;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    float: left;
+    min-height: 550px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    position: relative;
+    width: 190px;
+    */
+}
+
+#usermenu ul li {
+	text-align: left;
+	list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding-right:15px;
+    padding-bottom: 5px;
+}
+
+#usermenu a {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    color: #1F75CC;
+    text-align: left;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_it_clever_opengest_business_domain_Customer" items="${customers}" z="zOPrKmPrHxqNdyUlx88hCgH5lP0=">
+        <table:table data="${customers}" id="l_it_clever_opengest_business_domain_Customer" path="/customers" typeIdFieldName="idCliente" z="6hJ5vSlE2IaaBLT5LqZohtlijVY=">
+            <table:column id="c_it_clever_opengest_business_domain_Customer_codice" property="codice" z="TWcEBo4YgAbp60XFdvyrtRsc648="/>
+            <table:column id="c_it_clever_opengest_business_domain_Customer_ragSoc" property="ragSoc" z="dgdvH+52VYdLRPU0BZntfB86EoA="/>
+            <table:column id="c_it_clever_opengest_business_domain_Customer_piva" property="piva" z="pI20qRSIxztNuVw1VWejHUxnMbk="/>
+        </table:table>
+    </page:list>
+</div>

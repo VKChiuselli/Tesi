@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    
+  <description>XBizz 1.0 core library</description>
+  <display-name>XBizz core</display-name>
+  <tlib-version>1.0</tlib-version>
+  <short-name>spider</short-name>
+  <uri>/WEB-INF/tld</uri>
+
+  <tag>
+  	<name>tooltip</name>
+    <tag-class>org.spider.mymoney.taglib.TooltipTag</tag-class>
+    <body-content>JSP</body-content>
+  	<attribute>
+  		<name>proxyobj</name>
+  		<required>true</required>  		
+  		<rtexprvalue>true</rtexprvalue> 
+  		<type>org.spider.mymoney.proxy.ProxyTooltipGateway</type>  	
+  	</attribute>
+  	<attribute>
+  		<name>tagid</name>
+    	<required>true</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  	<attribute>
+  		<name>image</name>
+    	<required>true</required>  		
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  	<attribute>
+  		<name>parenttag</name>
+  		<required>false</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  	<attribute>
+  		<name>visibility</name>
+  		<required>false</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  </tag>
+
+</taglib>

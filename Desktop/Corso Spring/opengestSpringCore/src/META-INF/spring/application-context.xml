@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	
+       default-init-method="init" 
+       default-destroy-method="destroy">
+
+    <bean
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations"
+                          value="classpath:META-INF/spring/*.properties" />
+    </bean>
+
+    <bean id="dataSource"
+              class="it.clever.spring.tutorial.business.utils.DatasourceUtil">
+        <property name="driverClassName" value="${database.driverClassName}" />
+        <property name="url" value="${database.url}" />
+        <property name="username" value="${database.username}" />
+        <property name="password" value="${database.password}" />
+    </bean>
+
+    <bean id="factoryService" class="it.clever.spring.tutorial.business.utils.ServiceFactory"
+              scope="prototype" />
+
+    <bean id="hibernateDBService" class="it.clever.spring.tutorial.business.utils.IServiceUtil"
+              scope="singleton" init-method="createService" destroy-method="terminateService"
+              factory-method="buildService" factory-bean="factoryService">
+        <property name="datasourceUtil" ref="dataSource"/>
+        <!-- Ha la stessa funzionalità utilizzata nei costruttori -->
+        <constructor-arg value="0" type="java.lang.Integer"></constructor-arg>
+
+    </bean>
+
+    <bean id="userDao" class="it.clever.spring.tutorial.business.dao.UserDaoImpl"
+              scope="prototype">
+        <constructor-arg index="0" ref="hibernateDBService"></constructor-arg>
+    </bean>
+
+
+
+
+
+    <bean id="userService"
+              class="it.clever.spring.tutorial.business.facade.UserServiceFacadeImpl"
+              scope="prototype">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+
+
+    <bean id="productDao" class="it.clever.spring.tutorial.business.dao.ProductDaoImpl"
+          scope="prototype">
+        <constructor-arg index="0" ref="hibernateDBService"></constructor-arg>
+    </bean>
+
+    <bean id="productService"
+              class="it.clever.spring.tutorial.business.facade.ProductServiceFacadeImpl"
+              scope="prototype">
+        <property name="daoImpl" ref="productDao"></property>
+    </bean>
+
+
+</beans>

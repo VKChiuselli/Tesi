@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-giu-2015 14.59.14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="it.clever.hibernate.tutorial.business.entity.Department" table="regioni" catalog="opengest" optimistic-lock="version">
+        <id name="idRegione" type="java.lang.Integer">
+            <column name="id_regione" />
+            <generator class="identity" />
+        </id>
+        <property name="codice" type="string">
+            <column name="codice" length="45" not-null="true" />
+        </property>
+        <set name="utentis" table="utenti" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_regione" />
+            </key>
+            <one-to-many class="it.clever.hibernate.tutorial.business.entity.User" />
+        </set>
+        <set name="provinces" table="province" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_regione" not-null="true" />
+            </key>
+            <one-to-many class="it.clever.hibernate.tutorial.business.entity.District" />
+        </set>
+    </class>
+</hibernate-mapping>

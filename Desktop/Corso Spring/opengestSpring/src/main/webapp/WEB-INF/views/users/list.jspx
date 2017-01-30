@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_it_clever_opengest_business_domain_User" items="${users}" z="Q6ASwIHqAEkofdOGZPRiAfmgnD4=">
+        <table:table data="${users}" id="l_it_clever_opengest_business_domain_User" path="/users" z="/bktmQEoD3nBlPpl66xnfS8wXXM=">
+            <table:column id="c_it_clever_opengest_business_domain_User_username" property="username" z="zsYIf7ONSMEyd1d1QJF4nxCqHCQ="/>
+            <table:column id="c_it_clever_opengest_business_domain_User_password" property="password" z="peYlGGg+qfVzUKdNrDUfflXeTIY="/>
+            <table:column id="c_it_clever_opengest_business_domain_User_enabled" property="enabled" z="qxpnovWHj0CavpS2JDflKFiEzG0="/>
+            <table:column id="c_it_clever_opengest_business_domain_User_groups" property="groups" z="so8H805EclHPQ81J7PT2eWCxCSI="/>
+            <table:column id="c_it_clever_opengest_business_domain_User_company" property="company" z="AcCOd1eHn1kYSUu0K1+A5KB1ivg="/>
+        </table:table>
+    </page:list>
+</div>

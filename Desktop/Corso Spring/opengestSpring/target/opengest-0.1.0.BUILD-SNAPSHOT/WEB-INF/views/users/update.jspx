@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_it_clever_opengest_business_domain_User" modelAttribute="user" path="/users" versionField="Version" z="UHXXKea10Gf+3uUWT7efoGpEbQU=">
+        <field:input field="username" id="c_it_clever_opengest_business_domain_User_username" max="20" z="3+7roQPcfkeGVwfANDOaItam4Q4="/>
+        <field:input field="password" id="c_it_clever_opengest_business_domain_User_password" required="true" z="+M09NIh35WuG6OFoSwXytT0Apfg="/>
+        <field:checkbox field="enabled" id="c_it_clever_opengest_business_domain_User_enabled" z="WomhX//wPwADsSTqbztAowk8ass="/>
+        <field:input field="groups" id="c_it_clever_opengest_business_domain_User_groups" z="fLJOTRkPl97ngeU2MJGM3r8ut2s="/>
+        <field:select field="company" id="c_it_clever_opengest_business_domain_User_company" itemValue="id" items="${companys}" path="/companys" z="GcZymZu4oadkElMbUjp8NQuYaUE="/>
+    </form:update>
+</div>

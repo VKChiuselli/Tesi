@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_it_clever_opengest_business_domain_Order" object="${order}" path="/orders" z="va/9ACvX81BxNMJOylShy6B+YUQ=">
+        <field:display field="cliente" id="s_it_clever_opengest_business_domain_Order_cliente" object="${order}" z="FtbMhldJ8X/r16Hv8rxoGdBI+go="/>
+        <field:display field="ammontare" id="s_it_clever_opengest_business_domain_Order_ammontare" object="${order}" z="q87z2unJjZXD1fkKRwIs4PNvxKg="/>
+        <field:display date="true" dateTimePattern="${order_dataordine_date_format}" field="dataOrdine" id="s_it_clever_opengest_business_domain_Order_dataOrdine" object="${order}" z="iiO+kC6z0JXinGXuS+rYT5R4ysU="/>
+        <field:display field="quantita" id="s_it_clever_opengest_business_domain_Order_quantita" object="${order}" z="HjUwWjfGn1/cNfz1vi+laM8k34s="/>
+        <field:display field="product" id="s_it_clever_opengest_business_domain_Order_product" object="${order}" z="jltwKJ7AU8yYvked2+e+pbsR5Pw="/>
+    </page:show>
+</div>

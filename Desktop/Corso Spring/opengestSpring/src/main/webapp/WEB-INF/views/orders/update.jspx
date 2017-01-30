@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_it_clever_opengest_business_domain_Order" idField="idOrdine" modelAttribute="order" path="/orders" versionField="Version" z="G3d8vJ6yX099406QUhnG01NXdqY=">
+        <field:select field="cliente" id="c_it_clever_opengest_business_domain_Order_cliente" itemValue="idCliente" items="${customers}" path="/customers" z="SaMrjbBBky4298eIxK5ifRKorHE="/>
+        <field:input field="ammontare" id="c_it_clever_opengest_business_domain_Order_ammontare" required="true" validationMessageCode="field_invalid_number" z="pngG0sUbeoQ+WsBuupYWLl/bPI8="/>
+        <field:datetime dateTimePattern="${order_dataordine_date_format}" field="dataOrdine" id="c_it_clever_opengest_business_domain_Order_dataOrdine" required="true" z="5S7lQP82IyCBN6uCDLBaRnHqJm0="/>
+        <field:input field="quantita" id="c_it_clever_opengest_business_domain_Order_quantita" required="true" z="4sZM2FyDbIB9k2szhwXO88DlBN8="/>
+        <field:select field="product" id="c_it_clever_opengest_business_domain_Order_product" itemValue="idProdotto" items="${products}" path="/products" z="2kXosPnXE0PUmQWNeVamGhpCDSk="/>
+    </form:update>
+</div>

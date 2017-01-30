@@ -1,0 +1,35 @@
+<aspectj>
+<aspects>
+<aspect name="it.clever.opengest.business.domain.Customer_Roo_ToString"/>
+<aspect name="it.clever.opengest.business.domain.Product_Roo_Jpa_ActiveRecord"/>
+<aspect name="it.clever.opengest.web.controllers.OrderController_Roo_Controller"/>
+<aspect name="it.clever.opengest.web.controllers.UserController_Roo_Controller"/>
+<aspect name="it.clever.opengest.business.domain.Order_Roo_Jpa_ActiveRecord"/>
+<aspect name="it.clever.opengest.web.controllers.CompanyController_Roo_Controller"/>
+<aspect name="it.clever.opengest.business.domain.Company_Roo_ToString"/>
+<aspect name="it.clever.opengest.business.domain.Authority_Roo_Entity"/>
+<aspect name="it.clever.opengest.web.controllers.CustomerController_Roo_Controller"/>
+<aspect name="it.clever.opengest.business.domain.Company_Roo_JavaBean"/>
+<aspect name="it.clever.opengest.business.domain.Customer_Roo_Jpa_ActiveRecord"/>
+<aspect name="it.clever.opengest.business.domain.Product_Roo_Configurable"/>
+<aspect name="it.clever.opengest.business.domain.Product_Roo_Jpa_Entity"/>
+<aspect name="it.clever.opengest.business.domain.Order_Roo_Jpa_Entity"/>
+<aspect name="it.clever.opengest.web.controllers.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="it.clever.opengest.business.domain.Group_Roo_Entity"/>
+<aspect name="it.clever.opengest.business.domain.User_Roo_Jpa_ActiveRecord"/>
+<aspect name="it.clever.opengest.business.domain.Group_Roo_JavaBean"/>
+<aspect name="it.clever.opengest.business.domain.Order_Roo_JavaBean"/>
+<aspect name="it.clever.opengest.business.domain.User_Roo_Configurable"/>
+<aspect name="it.clever.opengest.business.domain.Customer_Roo_Configurable"/>
+<aspect name="it.clever.opengest.business.domain.Customer_Roo_Jpa_Entity"/>
+<aspect name="it.clever.opengest.business.domain.Order_Roo_Configurable"/>
+<aspect name="it.clever.opengest.business.domain.Product_Roo_ToString"/>
+<aspect name="it.clever.opengest.business.domain.User_Roo_ToString"/>
+<aspect name="it.clever.opengest.business.domain.Company_Roo_Jpa_ActiveRecord"/>
+<aspect name="it.clever.opengest.business.domain.Company_Roo_Configurable"/>
+<aspect name="it.clever.opengest.business.domain.Company_Roo_Jpa_Entity"/>
+<aspect name="it.clever.opengest.web.controllers.ProductController_Roo_Controller"/>
+<aspect name="it.clever.opengest.business.domain.User_Roo_Jpa_Entity"/>
+</aspects>
+</aspectj>
+

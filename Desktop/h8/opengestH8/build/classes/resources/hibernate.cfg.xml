@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>  <!-- -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/opengest</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		 
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+
+		<!--
+			 <property name="hibernate.cache.provider_class">org.hibernat	e.cache.EhCacheProvider</property> 
+			 <property name="hibernate.cache.region_prefix">testh8</property> 
+			 <property name="hibernate.cache.use_minimal_puts">true</property>
+			
+		-->
+			
+		<!-- Disable the second-level cache  -->
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.use_sql_comments">true</property>
+		<property name="show_sql">true</property>
+
+		<property name="hbm2ddl.auto">update</property>
+		
+		<mapping class="it.clever.hibernate.tutorial.business.entity.Customer" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.Order" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.Product" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.District" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.Department" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.User" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.AuthGroup" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.AuthAuthorities" />
+		<mapping class="it.clever.hibernate.tutorial.business.entity.CustomerContract" />
+		
+	</session-factory>
+</hibernate-configuration>

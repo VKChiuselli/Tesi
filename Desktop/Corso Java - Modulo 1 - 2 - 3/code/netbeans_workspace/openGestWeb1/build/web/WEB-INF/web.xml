@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+id="WebApp_ID" version="2.5">
+
+  <display-name>openGESTWeb1</display-name>
+  <servlet>
+    <description>Servlet per il caricamento delle configurazioni iniziali</description>
+    <display-name>ServiceLoaderServlet</display-name>
+    <servlet-name>ServiceLoaderServlet</servlet-name>
+    <servlet-class>com.webapp.servlet.core.ServiceLoaderServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet> 
+  
+  <servlet>
+    <description>Servlet per il login applicativo</description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.webapp.servlet.login.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <description>Servlet per la gestione dei menu</description>
+    <display-name>MenuServlet</display-name>
+    <servlet-name>MenuServlet</servlet-name>
+    <servlet-class>com.webapp.servlet.navigation.MenuServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>MenuServlet</servlet-name>
+    <url-pattern>/usersMenu</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/pages/login/login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

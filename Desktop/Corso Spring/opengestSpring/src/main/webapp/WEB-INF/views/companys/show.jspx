@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_it_clever_opengest_business_domain_Company" object="${company}" path="/companys" z="9Pe33nAi2c9LRLt8ptG7IXt3yd8=">
+        <field:display field="description" id="s_it_clever_opengest_business_domain_Company_description" object="${company}" z="jzH8wK5+oxki3tsy5TE4JGXngIw="/>
+        <field:display field="idCompany" id="s_it_clever_opengest_business_domain_Company_idCompany" object="${company}" z="4mxMCExaxg7q6W9NI6887QDea+U="/>
+        <field:display field="extendedDesc" id="s_it_clever_opengest_business_domain_Company_extendedDesc" object="${company}" z="3i4cyt3cSkY1uPKiNMZeAG+Y5AU="/>
+    </page:show>
+</div>

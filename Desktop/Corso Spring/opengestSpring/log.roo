@@ -1,0 +1,42 @@
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-12-16 19:04:18
+project --topLevelPackage it.clever.opengest
+persistence setup --provider HIBERNATE --database MYSQL
+perform eclipse
+web mvc setup
+// [failed] database reverse engineer --schema opengest --package ~.business.domain
+// [failed] database reverse engineer --schema opengest --package business.domain
+// [failed] database reverse engineer --schema opengest
+// [failed] database reverse engineer --schema opengest_warehouse --package business.domain
+// [failed] database reverse engineer --schema opengest_warehouse --package business.domain
+// [failed] database introspect --schema no-schema-required
+// [failed] database introspect --schema opengest
+// [failed] database introspect --schema opengest
+// [failed] database introspect --schema opengest
+// [failed] database introspect --schema opengest
+// [failed] database introspect --schema no-schema-required
+// [failed] addon install bundle --bundleSymbolicName org.springframework.roo.wrapping.mysql-connector-java;<version>
+// [failed] database introspect --schema no-schema-required
+osgi start --url file:///Users/robgion/TEMP/mysql-connector-java-5.0.3-bin.jar
+// [failed] database reverse engineer --schema opengest_warehouse --package business.domain
+// [failed] entity jpa --class ~.business.domain.User
+entity jpa --class ~.business.domain.UserEntity
+// [failed] database reverse engineer --schema opengest_warehouse --package business.domain
+// Spring Roo 1.3.1.RELEASE [rev f4f5256] log opened at 2016-12-16 21:57:09
+// Spring Roo 1.3.1.RELEASE [rev f4f5256] log closed at 2016-12-16 22:04:45
+// [failed] database reverse engineer --schema opengest_warehouse --package business.domain
+entity jpa --class ~.business.domain.Product
+// [failed] entity jpa --class ~.business.domain.Order
+entity jpa --class ~.business.domain.OrderEntity
+perform tests
+perform tests
+web mvc all --package ~.web
+security setup
+// [failed] entity jpa --class ~.business.domain.Company
+// [failed] entity jpa --class ~.business.domain.Company
+// [failed] entity jpa --class ~.business.domain.Compa
+// [failed] entity jpa --class ~.business.domain.CompanyEntity
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-12-16 23:26:41
+entity jpa --class ~.business.domain.Company
+ web mvc all --package ~.web.controllers
+entity jpa --class ~.business.domain.Customer
+ web mvc all --package ~.web.controllers

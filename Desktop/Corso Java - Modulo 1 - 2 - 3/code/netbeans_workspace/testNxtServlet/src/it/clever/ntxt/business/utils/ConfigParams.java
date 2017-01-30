@@ -1,0 +1,58 @@
+/**
+ * JSONServlet
+ * www.2clever.it
+ * 
+ * 20 nov 2016
+ * For further information please write to info@2clever.it
+ * 
+ */
+package it.clever.ntxt.business.utils;
+
+public class ConfigParams {
+
+	private String PARAM_DATABASE_DRIVER;
+	private String PARAM_DATABASE_URL;
+	private String PARAM_DATABASE_USERNAME;
+	private String PARAM_DATABASE_PASSWORD;
+	private String PARAM_DATABASE_DATASOURCE;
+	private String PARAM_DATABASE_START_MODE;
+
+	public ConfigParams(String pARAM_DATABASE_DRIVER,
+			String pARAM_DATABASE_URL, String pARAM_DATABASE_USERNAME,
+			String pARAM_DATABASE_PASSWORD, String pARAM_DATABASE_DATASOURCE,
+			String pPARAM_DATABASE_START_MODE) {
+
+		this.PARAM_DATABASE_DRIVER = pARAM_DATABASE_DRIVER;
+		this.PARAM_DATABASE_URL = pARAM_DATABASE_URL;
+		this.PARAM_DATABASE_USERNAME = pARAM_DATABASE_USERNAME;
+		this.PARAM_DATABASE_PASSWORD = pARAM_DATABASE_PASSWORD;
+		this.PARAM_DATABASE_DATASOURCE = pARAM_DATABASE_DATASOURCE;
+		this.PARAM_DATABASE_START_MODE = pPARAM_DATABASE_START_MODE;
+	}
+
+
+	public String getPARAM_DATABASE_DRIVER() {
+		return PARAM_DATABASE_DRIVER;
+	}
+
+	public String getPARAM_DATABASE_URL() {
+		return PARAM_DATABASE_URL;
+	}
+
+	public String getPARAM_DATABASE_USERNAME() {
+		return PARAM_DATABASE_USERNAME;
+	}
+
+	public String getPARAM_DATABASE_PASSWORD() {
+		return PARAM_DATABASE_PASSWORD;
+	}
+
+	public String getPARAM_DATABASE_DATASOURCE() {
+		return PARAM_DATABASE_DATASOURCE;
+	}
+
+	public String getPARAM_DATABASE_START_MODE() {
+		return PARAM_DATABASE_START_MODE;
+	}
+
+}

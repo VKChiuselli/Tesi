@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+	   					   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   
+	   					   http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+	   					   http://www.springframework.org/schema/context 
+	   					   http://www.springframework.org/schema/context/spring-context-3.0.xsd   
+	   					   http://www.springframework.org/schema/jee 
+	   					   http://www.springframework.org/schema/jee/spring-jee-3.0.xsd   
+	   					   http://www.springframework.org/schema/tx 
+	   					   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
+	default-init-method="init" default-destroy-method="destroy">
+
+	<!-- Attiva lo scanning dei @Repository, @Component, @Controller, @Service -->
+	
+	<context:component-scan base-package="it.clever.spring.tutorial.business.dao.trx"/>
+	<context:component-scan base-package="it.clever.spring.tutorial.business.facade.trx"/>
+
+	<aop:config proxy-target-class="true" />
+<!-- 
+	<tx:annotation-driven />
+ -->
+
+	<!-- ORM CONFIG -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="classpath:META-INF/spring/*.properties" />
+	</bean>
+
+	<!-- Utilizzato per la traduzione delle eccezioni dello strato di business. 
+		 -->
+		<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+	<!-- DataSource onfig -->
+	<bean id="opgDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${database.driverClassName}" />
+		<property name="url" value="${database.url}" />
+		<property name="username" value="${database.username}" />
+		<property name="password" value="${database.password}" />
+		<property name="timeBetweenEvictionRunsMillis" value="${database.timeBetweenEvictionRunsMillis}" />
+		<property name="minEvictableIdleTimeMillis" value="${database.minEvictableIdleTimeMillis}" />
+		<property name="numTestsPerEvictionRun" value="${database.numTestsPerEvictionRun}" />
+		<property name="validationQuery" value="SELECT 1" />
+		<property name="testOnBorrow" value="true" />
+	</bean>
+
+	<!-- SessionFactory config -->
+	<bean id="opgSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="opgDataSource" />
+		<property name="configLocation">
+			<value>
+				classpath:META-INF/spring/hibernate.cfg.xml
+			</value>
+		</property>
+	</bean>
+
+	<!-- Configurazione del TransactionManagement -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="opgSessionFactory" />
+	</bean>
+
+	<!-- Il transactional advice impone i meccanismi di handling delle transazioni -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!-- tutti i metodi che inziano per 'find' sono read-only -->
+            <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>
+            <!-- gli altri metodi utilizzano un comportamento di default -->
+            <tx:method name="*" propagation="REQUIRES_NEW" 
+            		rollback-for="Exception" no-rollback-for="BusinessException"/>
+        </tx:attributes>
+    </tx:advice>
+  
+      <!-- Viene assicurato che l'handler delle transazioni si attivi
+      		 per ciascuna operazione definita nell'interfaccia dei servizi. -->
+    <aop:config>
+        <aop:pointcut id="appServiceOperation" expression="execution(* it.clever.spring.tutorial.business.facade.trx.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="appServiceOperation"/>
+    </aop:config>
+    
+      
+	<bean id="userService"
+		class="it.clever.spring.tutorial.business.facade.trx.UserServiceFacadeImpl"
+		scope="prototype">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+
+	<bean id="orderService"
+		class="it.clever.spring.tutorial.business.facade.trx.OrderServiceFacadeImpl"
+		scope="prototype">
+		<property name="orderDao" ref="orderDao"></property>
+
+	</bean>
+
+</beans>

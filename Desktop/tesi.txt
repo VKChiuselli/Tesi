@@ -1,0 +1,106 @@
+CAPITOLO 0
+PATTERN MVC
+cosa è il pattern MVC,
+utilizzato per sviluppare l'applicazione client
+far vedere come ho organizzato i package (screenshot, e spiego con due righe) package pojo continee solo pojo, parte service solo i servici
+classi servizio cosa fanno? descriverli, interfaccia tra i pojo e le view
+Strutturato MVC in quel modo: controllo sono servizi e controller e DAO, view: interfacce e fxml, modello: pojo
+
+CAPITOLO 1
+SVILUPPO APLLICAZIOONE CLIENT CON JAVA FX
+java fx è una tecponologia che viene utilizzata per applicazioni client (mentre sennò usavo java normale per il web)
+mettere architettura client<<strato ORM<<base di dati (embedded, HSQL) dentro il quadrato di tutto il client, abbiamo il jar che contiene:
+
+java fx
+logica business
+database
+
+per la compilazione dei rimborsi spese perchè l'utente può regsitratlo su una applicazione su database piuttosto che con carta
+
+
+
+cosa ho sviluppato?
+
+CAPITOLO 2
+JAVAFX
+proprietà, come abbiamo fatto, faccio vedere un pò di cose e di codice
+scene builder, fxml, controller, come si collega un controller all'fxml
+qua faccio vedere l'interfaccia, cosa è uscito fuori
+
+
+CAPITOLO 3
+DATABASE
+3.1 concetto ORM + concetto HIBERNATE, ---< già fatti,
+HIBERNATE SPIEGATO, POI FOCUS SU ANNOTAZIONI, spiego la hibernate util (guarda appunti professore giontella) fai vedere come nel pojo come vengono gestite le annotazioni
+ (primary key con strategia uuid, chaive con 128 bit, cose con transient, many to one, lazy eager)
+
+3.2 con HSQLDB, spiega cosa è un database embeded. 
+come è fatto un database embedded. E' un jar, fa screenshot, spiegandolo, che hsqldb, cosa è un database embedede che è incorporato 
+screenshot che è un jar in effetti...
+
+
+3.3
+FILE DI CONFIGURAZIONE DI HIBERNATE .cfg fai lo screenshot, e lo spiego. come mi sono collegato con questo HSQLDDB, dialetto, 
+spiega tutto quello che trovi, ogni riga.
+come ho fatto io a generare tabella e classi, e cosa succede. (che genero un file di testo con il database... file.db)
+come hibernate si interfaccia con hsqldb
+
+
+
+CAPITOLO 4
+MAVEN 
+descerivere cosa è, gestore di dipendenze, specificare che lo utilizziamo come package manager per la generazione del jar
+
+CAPITOLO 5 JUNIT
+copme si fanno i test, classe test con vari annotazioni, before, beforeclass
+assert, assertnull etc...
+metto gli screenshot dei test che ho fatto, che poi li manderò magari a git, propedeutica alla commit, se è tutto verde, faccio la commit senza problemi
+
+
+CAPITOLO 6
+continuous integration
+
+
+6.1 GIT
+esigenza di condividere codice e continuios integration, pezzi di codice che sviluppo io devono essere mergiati con altre persone, che non sia un codice marcio,
+deve superare i test con i codice degli altri.
+come funziona git
+come strutturato i progetti
+spiegare tutti passaggi di git
+obiettivo di fare merge
+screenshot repository centrale, vari branch creati, metterci anche il master
++ cose che ho già scritto
+
+
+
+
+6.2 jenkins
+fai screenshot delle configurazioni di jenkins, ma anche di git (8gli screenshot) perchè: coem fa a fare richiesta di merge, cosa accade sotto le quinte?
+parte una richiesta hhttp a jenkisn indiscando nei parametri, richiesta del codice sorgetne dal quale jenkins carica i sorgenti e simula i lavori/job,facendo una premerge, l'esito della
+quale deteremina se il branch è mergiabile con il master, il mio job è l'esecuzione dei test. (indicare che avevamo messo come GOAL: test) (metti screenshot).
+mettere screenshot che è avvenuto la merge correttamente.
+
+mettere una immagine dell'archittettura che lega jenkins a git
+
+
+
+
+
+
+
+CONCLUSIONE E SVILUPPO FUTURI:
+fare un sunto del sunto
+interessante dotare l'applicaizone dlcient di una componente server
+
+
+
+
+
+
+
+
+
+
+
+
+da dire al prof.

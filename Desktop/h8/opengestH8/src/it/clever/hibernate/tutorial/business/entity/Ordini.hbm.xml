@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-giu-2015 14.59.14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="it.clever.hibernate.tutorial.business.entity.Order" table="ordini" catalog="opengest" optimistic-lock="version">
+        <id name="idOrdine" type="java.lang.Integer">
+            <column name="id_ordine" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="clienti" class="it.clever.hibernate.tutorial.business.entity.Customer" fetch="select">
+            <column name="id_cliente" not-null="true" />
+        </many-to-one>
+        <many-to-one name="prodotti" class="it.clever.hibernate.tutorial.business.entity.Product" fetch="select">
+            <column name="id_prodotto" not-null="true" />
+        </many-to-one>
+        <property name="ammontare" type="big_decimal">
+            <column name="ammontare" precision="10" not-null="true" />
+        </property>
+        <property name="dataOrdine" type="timestamp">
+            <column name="data_ordine" length="19" not-null="true" />
+        </property>
+        <property name="quantita" type="int">
+            <column name="quantita" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

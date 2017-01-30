@@ -1,0 +1,88 @@
+
+.user-fieldset {
+	margin-bottom:80px;
+	width: 69%;
+}
+
+.user-fieldset input {
+	float: right;
+}
+
+.user-fieldset input[type="submit"]{
+    clear: left !important;
+    float: left !important;
+    margin-top: 30px;
+}
+
+.user-fieldset div {
+	float: left;
+	margin-bottom: 10px;
+	padding-right:30px;
+	width: 40%;
+}
+
+.user-fieldset p {
+	margin-bottom: 40px;
+	padding-right:30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.user-fieldset label {
+	margin-right:5px;
+}	
+	
+.user-table-container {
+	position: relative;
+	margin-top: 40px;
+	float: right;
+	margin-right: 150px;
+}
+
+.user-table {
+	margin-left: 20px;
+}
+
+.user-table thead {
+	margin-bottom: 20px;
+}
+
+.user-table tbody {
+	padding-top: 20px;
+}
+
+.user-table tr {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.user-table th {
+	padding-left: 20px;
+}
+
+.user-table td {
+	padding-left: 20px;
+}
+
+.user-table-header {
+	background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../resources/images/skinny_dots.gif");
+    background-origin: padding-box;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-size: auto auto;
+    margin-bottom: 7px;
+    min-height: 19px;
+}
+
+.delete-link {
+	background-image: url('../resources/images/delete.gif");
+    background-origin: padding-box;
+    background-position: center bottom;	
+    background-repeat: no-repeat;
+    background-size: auto auto;
+     
+}
+

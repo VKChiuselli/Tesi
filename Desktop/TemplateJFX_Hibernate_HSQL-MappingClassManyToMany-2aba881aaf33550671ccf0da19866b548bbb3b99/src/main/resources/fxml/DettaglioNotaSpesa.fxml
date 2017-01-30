@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mixPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nsi.rsni.controller.DettaglioNotaSpesaController">
+    <children>
+        <Button fx:id="buttonSalva" layoutX="299.0" layoutY="478.0" mnemonicParsing="false" onAction="#salvaTutto" text="SALVA" />
+        <TextField fx:id="agenteField" alignment="CENTER" layoutX="110.0" layoutY="50.0" />
+        <TextField fx:id="ufficioField" alignment="CENTER" layoutX="110.0" layoutY="80.0" />
+        <TextField fx:id="partenzaField" alignment="CENTER" layoutX="110.0" layoutY="110.0" />
+        <Label layoutX="27.0" layoutY="80.0" text="ufficio" />
+        <Label layoutX="27.0" layoutY="110.0" text="partenza" />
+        <Label layoutX="290.0" layoutY="80.0" text="viaggio" />
+        <Label layoutX="290.0" layoutY="50.0" text="matricola" />
+        <TextField fx:id="matricolaField" alignment="CENTER" layoutX="437.0" layoutY="50.0" />
+        <TextField fx:id="viaggioField" alignment="CENTER" layoutX="437.0" layoutY="80.0" />
+        <TextField fx:id="ritornoField" alignment="CENTER" layoutX="437.0" layoutY="110.0" />
+        <Label layoutX="290.0" layoutY="110.0" text="ritorno" />
+        <Label layoutX="222.0" layoutY="16.0" text="ID" />
+        <TextField fx:id="idField" editable="false" layoutX="271.0" layoutY="11.0" prefHeight="25.0" prefWidth="69.0" />
+        <Label layoutX="27.0" layoutY="50.0" text="agente" />
+        <Label fx:id="error1" layoutX="27.0" layoutY="67.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error2" layoutX="27.0" layoutY="97.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error3" layoutX="27.0" layoutY="129.0" prefHeight="17.0" prefWidth="77.0" textFill="#37f547" />
+        <Label fx:id="error4" layoutX="27.0" layoutY="188.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error5" layoutX="27.0" layoutY="218.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error6" layoutX="27.0" layoutY="250.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error8" layoutX="27.0" layoutY="306.0" prefHeight="17.0" prefWidth="77.0" textFill="#c7f2f5" />
+        <Label fx:id="error10" layoutX="27.0" layoutY="338.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error11" layoutX="27.0" layoutY="368.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error12" layoutX="286.0" layoutY="68.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error13" layoutX="286.0" layoutY="98.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error14" layoutX="286.0" layoutY="130.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error15" layoutX="286.0" layoutY="160.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error16" layoutX="286.0" layoutY="189.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error17" layoutX="286.0" layoutY="219.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error20" layoutX="286.0" layoutY="307.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error21" layoutX="286.0" layoutY="339.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <Label fx:id="error22" layoutX="286.0" layoutY="369.0" prefHeight="17.0" prefWidth="77.0" textFill="#f50707" />
+        <TableView fx:id="tabelMix" editable="true" layoutX="26.0" layoutY="207.0" prefHeight="200.0" prefWidth="411.0">
+            <columns>
+                <TableColumn fx:id="idColumn" editable="false" prefWidth="160.0" text="ID" />
+                <TableColumn fx:id="descrizioneColumn" editable="false" prefWidth="50.0" text="Descrizione" />
+                <TableColumn fx:id="importoColumn" editable="true" prefWidth="88.0" text="Importo" />
+                <TableColumn fx:id="ivaCollumn" minWidth="0.0" prefWidth="60.0" text="IVA" />
+            </columns>
+        </TableView>
+        <Button fx:id="inserisciNuovoTipoSpesa" layoutX="458.0" layoutY="385.0" mnemonicParsing="false" onAction="#inserisciNuovoTipoSpesa" prefHeight="25.0" prefWidth="196.0" text="Inserisci NUOVO tipo spesa" />
+        <ComboBox fx:id="TipiSpesecomboBoxMix" layoutX="144.0" layoutY="165.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label layoutX="27.0" layoutY="169.0" text="Seleziona tipo spesa" />
+        <Button fx:id="inserisciTS" layoutX="289.0" layoutY="165.0" mnemonicParsing="false" onAction="#aggiungiTipoSpesa" prefHeight="25.0" prefWidth="149.0" text="Inserisci TS selezionata" />
+    </children>
+</AnchorPane>
